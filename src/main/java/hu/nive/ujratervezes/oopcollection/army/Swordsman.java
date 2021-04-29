@@ -1,10 +1,5 @@
 package hu.nive.ujratervezes.oopcollection.army;
-//Swordsman
-//A kardforgató életereje 100 pont, sebzése 10.
-//Vagy van páncélja vagy nincs.
-//
-//Minden kardforgatónak van pajzsa, amivel kivédi az első őt ért csapást.
-//A pajzs az első kapott sebzés 100%-át felfogja, majd összetörik, tovább nem használható.
+
 public class Swordsman extends MilitaryUnit {
 
     private boolean shield;
@@ -13,7 +8,6 @@ public class Swordsman extends MilitaryUnit {
         super(100, 10, hasArmor);
         this.shield = true;
     }
-
     @Override
     public int sufferDamage(int damage) {
         if(shield) {
@@ -32,6 +26,6 @@ public class Swordsman extends MilitaryUnit {
 
     @Override
     public int getHitPoints() {
-        return 0;
+        return this.health;
     }
 }

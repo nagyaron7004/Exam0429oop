@@ -1,9 +1,5 @@
 package hu.nive.ujratervezes.oopcollection.army;
 
-//Archer
-//Az íjász életereje 50 pont, sebzése 20.
-//Nem rendelkezik páncéllal.
-
 public class Archer extends MilitaryUnit {
 
     public Archer() {
@@ -12,6 +8,6 @@ public class Archer extends MilitaryUnit {
 
     @Override
     public int getHitPoints() {
-        return 0;
+        return this.health;
     }
 }

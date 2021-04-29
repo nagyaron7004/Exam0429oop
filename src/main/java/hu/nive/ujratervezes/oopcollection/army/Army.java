@@ -21,16 +21,13 @@ public class Army {
     public void addUnit(MilitaryUnit militaryUnit) {
         this.army.add(militaryUnit);
     }
-
     public void damageAll(int damage) {
         this.army.forEach(solider -> solider.sufferDamage(damage));
         this.army.removeIf(solider -> solider.health <= 25);
     }
-
     public int getArmyDamage() {
         return this.army.stream().mapToInt(MilitaryUnit::doDamage).sum();
     }
-
     public int getArmySize() {
         return this.army.size();
     }
